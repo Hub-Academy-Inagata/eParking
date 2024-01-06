@@ -11,19 +11,10 @@
 </head>
 
 <body>
-    <section class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="sidebar-wrapper d-flex flex-column flex-shrink-0 p-3 text-dark bg-light shadow-md rounded">
-            <div class="d-flex">
-                <a href="#" id="sidebarToggle" class="me-2">
-                    <svg width="16" height="16" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.5" d="M8 15.0305C4.8573 15.0305 3.28596 15.0305 2.30964 14.0542C1.33333 13.0779 1.33333 11.5065 1.33333 8.36382C1.33333 5.22112 1.33333 3.64977 2.30964 2.67346C3.28596 1.69715 4.8573 1.69715 8 1.69715C11.1427 1.69715 12.714 1.69715 13.6904 2.67346C14.6667 3.64977 14.6667 5.22112 14.6667 8.36382C14.6667 11.5065 14.6667 13.0779 13.6904 14.0542C12.714 15.0305 11.1427 15.0305 8 15.0305Z" fill="#0F3958"/>
-                        <path d="M12.5 5.69715C12.5 5.97329 12.2761 6.19715 12 6.19715H4C3.72386 6.19715 3.5 5.97329 3.5 5.69715C3.5 5.42101 3.72386 5.19715 4 5.19715H12C12.2761 5.19715 12.5 5.42101 12.5 5.69715Z" fill="#0F3958"/>
-                        <path d="M12.5 8.36382C12.5 8.63996 12.2761 8.86382 12 8.86382H4C3.72386 8.86382 3.5 8.63996 3.5 8.36382C3.5 8.08768 3.72386 7.86382 4 7.86382H12C12.2761 7.86382 12.5 8.08768 12.5 8.36382Z" fill="#0F3958"/>
-                        <path d="M12.5 11.0305C12.5 11.3066 12.2761 11.5305 12 11.5305H4C3.72386 11.5305 3.5 11.3066 3.5 11.0305C3.5 10.7543 3.72386 10.5305 4 10.5305H12C12.2761 10.5305 12.5 10.7543 12.5 11.0305Z" fill="#0F3958"/>
-                        </svg>
-                </a>
-                <h1 class="d-flex gap-2 align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <div class="sidebar active shadow-md">
+            <div class="logo_content">
+                <div class="logo gap-2">
                     <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.5809 15.9007C18.7091 16.0236 18.8798 16.0923 19.0574 16.0923H23.4417C24.0619 16.0923 24.3658 15.3365 23.9182 14.9072L9.56608 1.14014C9.4379 1.01719 9.26717 0.948547 9.08957 0.948547H4.70522C4.08503 0.948547 3.78114 1.70434 4.22871 2.13366L18.5809 15.9007Z" fill="url(#paint0_linear_1_394)"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.656748 6.27354C0.459606 6.12687 0.325256 5.90405 0.325256 5.65833V3.06964C0.325256 2.46326 1.05251 2.15312 1.49011 2.57288L14.3486 14.9071C14.7962 15.3364 14.4923 16.0922 13.8721 16.0922H9.5253C9.3477 16.0922 9.17697 16.0235 9.0488 15.9006L5.60857 12.6006C5.17097 12.1808 4.44371 12.491 4.44371 13.0974V15.4038C4.44371 15.784 4.13553 16.0922 3.75536 16.0922H1.01361C0.633441 16.0922 0.325256 15.784 0.325256 15.4038V12.415C0.325256 12.1693 0.459606 11.9465 0.656748 11.7998C1.49992 11.1725 2.04613 10.1684 2.04613 9.03668C2.04613 7.90498 1.49992 6.90085 0.656748 6.27354Z" fill="#51B46C"/>
@@ -35,45 +26,55 @@
                         </linearGradient>
                         </defs>
                         </svg>   
-                    <span class="fs-5 fw-bold">eParking</span>
-                </h1>
+                    <div class="logo_name">
+                        <h5 class="m-0">eParking</h5>
+                    </div>
+                </div>
+                <button class="btn" id="btn">
+                    <svg width="16" height="16" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M8 15.0305C4.8573 15.0305 3.28596 15.0305 2.30964 14.0542C1.33333 13.0779 1.33333 11.5065 1.33333 8.36382C1.33333 5.22112 1.33333 3.64977 2.30964 2.67346C3.28596 1.69715 4.8573 1.69715 8 1.69715C11.1427 1.69715 12.714 1.69715 13.6904 2.67346C14.6667 3.64977 14.6667 5.22112 14.6667 8.36382C14.6667 11.5065 14.6667 13.0779 13.6904 14.0542C12.714 15.0305 11.1427 15.0305 8 15.0305Z" fill="#0F3958"/>
+                        <path d="M12.5 5.69715C12.5 5.97329 12.2761 6.19715 12 6.19715H4C3.72386 6.19715 3.5 5.97329 3.5 5.69715C3.5 5.42101 3.72386 5.19715 4 5.19715H12C12.2761 5.19715 12.5 5.42101 12.5 5.69715Z" fill="#0F3958"/>
+                        <path d="M12.5 8.36382C12.5 8.63996 12.2761 8.86382 12 8.86382H4C3.72386 8.86382 3.5 8.63996 3.5 8.36382C3.5 8.08768 3.72386 7.86382 4 7.86382H12C12.2761 7.86382 12.5 8.08768 12.5 8.36382Z" fill="#0F3958"/>
+                        <path d="M12.5 11.0305C12.5 11.3066 12.2761 11.5305 12 11.5305H4C3.72386 11.5305 3.5 11.3066 3.5 11.0305C3.5 10.7543 3.72386 10.5305 4 10.5305H12C12.2761 10.5305 12.5 10.7543 12.5 11.0305Z" fill="#0F3958"/>
+                        </svg>
+                </button>
             </div>
-            <ul class="nav nav-pills flex-column mb-auto mt-3">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active" onclick="changeContent('content1')" style="color: #ffffff; background: #269544;">
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
-                                <path d="M6.29771 10.9926C6.07587 10.8282 5.76273 10.8747 5.59829 11.0965C5.43385 11.3184 5.48038 11.6315 5.70223 11.796C6.3505 12.2765 7.14332 12.561 7.99997 12.561C8.85662 12.561 9.64944 12.2765 10.2977 11.796C10.5196 11.6315 10.5661 11.3184 10.4017 11.0965C10.2372 10.8747 9.92407 10.8282 9.70223 10.9926C9.21667 11.3525 8.63057 11.561 7.99997 11.561C7.36937 11.561 6.78327 11.3525 6.29771 10.9926Z" fill="#C2C2C2"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 1.5611C7.51655 1.5611 7.07552 1.69384 6.59277 1.91917C6.12546 2.13728 5.58507 2.4592 4.90781 2.86265L3.9374 3.44072C3.19132 3.88514 2.59682 4.23928 2.14669 4.57792C1.68201 4.92751 1.33324 5.2875 1.10597 5.76158C0.878576 6.23589 0.816946 6.7323 0.836714 7.31166C0.855849 7.87245 0.953953 8.5542 1.07696 9.40903L1.27186 10.7636C1.43012 11.8635 1.55571 12.7363 1.74333 13.4159C1.93674 14.1164 2.21116 14.6724 2.70635 15.0988C3.20114 15.5248 3.79315 15.7154 4.51748 15.8062C5.22095 15.8944 6.10846 15.8944 7.22812 15.8944H8.7717C9.89136 15.8944 10.7789 15.8944 11.4824 15.8062C12.2067 15.7154 12.7987 15.5248 13.2935 15.0988C13.7887 14.6724 14.0631 14.1164 14.2565 13.4159C14.4441 12.7363 14.5697 11.8635 14.728 10.7636L14.9229 9.409C15.0459 8.55419 15.144 7.87244 15.1631 7.31166C15.1829 6.7323 15.1213 6.23589 14.8939 5.76158C14.6666 5.2875 14.3178 4.92751 13.8532 4.57792C13.403 4.23928 12.8085 3.88514 12.0624 3.44072L11.092 2.86265C10.4148 2.4592 9.87438 2.13728 9.40707 1.91916C8.92432 1.69384 8.48329 1.5611 7.99992 1.5611ZM5.39697 3.73524C6.10198 3.31527 6.59941 3.01964 7.01573 2.82532C7.42179 2.63578 7.71375 2.5611 7.99992 2.5611C8.28609 2.5611 8.57805 2.63578 8.98412 2.82532C9.40043 3.01964 9.89786 3.31527 10.6029 3.73524L11.5261 4.2852C12.3023 4.74758 12.85 5.07466 13.252 5.37703C13.6443 5.67217 13.8591 5.91639 13.9921 6.19388C14.1251 6.47113 14.1803 6.79001 14.1637 7.27756C14.1467 7.77745 14.057 8.4053 13.929 9.29513L13.7431 10.5867C13.5788 11.7288 13.4613 12.5386 13.2926 13.1497C13.1277 13.747 12.9292 14.0929 12.641 14.341C12.3524 14.5895 11.9783 14.7362 11.3579 14.814C10.7239 14.8935 9.89909 14.8944 8.7373 14.8944H7.26254C6.10075 14.8944 5.27595 14.8935 4.64192 14.814C4.02156 14.7362 3.64744 14.5895 3.35886 14.341C3.07068 14.0929 2.87217 13.747 2.70726 13.1497C2.53852 12.5386 2.42105 11.7288 2.25672 10.5867L2.07087 9.29513C1.94283 8.4053 1.85319 7.77745 1.83613 7.27756C1.8195 6.79001 1.87478 6.47113 2.0077 6.19388C2.14073 5.91639 2.35557 5.67217 2.74788 5.37703C3.1498 5.07466 3.69754 4.74758 4.47375 4.2852L5.39697 3.73524Z" fill="#C2C2C2"/>
-                                </svg>                            
-                            Beranda
-                        </a>
-                    </li>
+            <div class="nav_list">
+                <ul>
                     <li>
-                        <a href="#" class="nav-link" onclick="changeContent('content2')" style="color: #606060;">
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33331 5.15041C1.33331 3.44416 2.7165 2.06097 4.42274 2.06097C6.12899 2.06097 7.51218 3.44416 7.51218 5.15041C7.51218 6.85665 6.12899 8.23984 4.42274 8.23984C2.7165 8.23984 1.33331 6.85665 1.33331 5.15041Z" fill="#C2C2C2"/>
-                                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M8.48798 12.3049C8.48798 10.5986 9.87116 9.21545 11.5774 9.21545C13.2837 9.21545 14.6668 10.5986 14.6668 12.3049C14.6668 14.0111 13.2837 15.3943 11.5774 15.3943C9.87116 15.3943 8.48798 14.0111 8.48798 12.3049Z" fill="#C2C2C2"/>
-                                <path d="M1.33331 12.3943C1.33331 10.9801 1.33331 10.273 1.77265 9.83363C2.21199 9.39429 2.9191 9.39429 4.33331 9.39429C5.74753 9.39429 6.45463 9.39429 6.89397 9.83363C7.33331 10.273 7.33331 10.9801 7.33331 12.3943C7.33331 13.8085 7.33331 14.5156 6.89397 14.9549C6.45463 15.3943 5.74753 15.3943 4.33331 15.3943C2.9191 15.3943 2.21199 15.3943 1.77265 14.9549C1.33331 14.5156 1.33331 13.8085 1.33331 12.3943Z" fill="#C2C2C2"/>
-                                <path opacity="0.5" d="M8.66669 5.06097C8.66669 3.64676 8.66669 2.93965 9.10603 2.50031C9.54537 2.06097 10.2525 2.06097 11.6667 2.06097C13.0809 2.06097 13.788 2.06097 14.2273 2.50031C14.6667 2.93965 14.6667 3.64676 14.6667 5.06097C14.6667 6.47519 14.6667 7.18229 14.2273 7.62163C13.788 8.06097 13.0809 8.06097 11.6667 8.06097C10.2525 8.06097 9.54537 8.06097 9.10603 7.62163C8.66669 7.18229 8.66669 6.47519 8.66669 5.06097Z" fill="#C2C2C2"/>
-                                </svg>                            
-                            Event
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link" onclick="changeContent('content3')" style="color: #606060;">
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66669 3.85719V13.1905C2.66669 14.2951 3.56212 15.1905 4.66669 15.1905H11.3334C12.4379 15.1905 13.3334 14.2951 13.3334 13.1905V6.52386C13.3334 5.41929 12.4379 4.52386 11.3334 4.52386H3.33335C2.96516 4.52386 2.66669 4.22538 2.66669 3.85719ZM4.83335 8.52386C4.83335 8.24772 5.05721 8.02386 5.33335 8.02386H10.6667C10.9428 8.02386 11.1667 8.24772 11.1667 8.52386C11.1667 8.8 10.9428 9.02386 10.6667 9.02386H5.33335C5.05721 9.02386 4.83335 8.8 4.83335 8.52386ZM4.83335 10.8572C4.83335 10.5811 5.05721 10.3572 5.33335 10.3572H9.00002C9.27616 10.3572 9.50002 10.5811 9.50002 10.8572C9.50002 11.1333 9.27616 11.3572 9.00002 11.3572H5.33335C5.05721 11.3572 4.83335 11.1333 4.83335 10.8572Z" fill="#C2C2C2"/>
-                                <path opacity="0.5" d="M12 3.39454V4.63765C11.7915 4.56395 11.5671 4.52385 11.3334 4.52385H3.33335C2.96516 4.52385 2.66669 4.22537 2.66669 3.85718V3.80982C2.66669 3.45447 2.92798 3.1532 3.27975 3.10295L10.4781 2.07461C11.2814 1.95986 12 2.58314 12 3.39454Z" fill="#C2C2C2"/>
-                                </svg>                            
-                            Laporan
-                        </a>
-                    </li>
+                    <a href="#" class="nav-link" data-content="content1">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
+                            <path d="M6.29771 10.9926C6.07587 10.8282 5.76273 10.8747 5.59829 11.0965C5.43385 11.3184 5.48038 11.6315 5.70223 11.796C6.3505 12.2765 7.14332 12.561 7.99997 12.561C8.85662 12.561 9.64944 12.2765 10.2977 11.796C10.5196 11.6315 10.5661 11.3184 10.4017 11.0965C10.2372 10.8747 9.92407 10.8282 9.70223 10.9926C9.21667 11.3525 8.63057 11.561 7.99997 11.561C7.36937 11.561 6.78327 11.3525 6.29771 10.9926Z" fill="#C2C2C2"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 1.5611C7.51655 1.5611 7.07552 1.69384 6.59277 1.91917C6.12546 2.13728 5.58507 2.4592 4.90781 2.86265L3.9374 3.44072C3.19132 3.88514 2.59682 4.23928 2.14669 4.57792C1.68201 4.92751 1.33324 5.2875 1.10597 5.76158C0.878576 6.23589 0.816946 6.7323 0.836714 7.31166C0.855849 7.87245 0.953953 8.5542 1.07696 9.40903L1.27186 10.7636C1.43012 11.8635 1.55571 12.7363 1.74333 13.4159C1.93674 14.1164 2.21116 14.6724 2.70635 15.0988C3.20114 15.5248 3.79315 15.7154 4.51748 15.8062C5.22095 15.8944 6.10846 15.8944 7.22812 15.8944H8.7717C9.89136 15.8944 10.7789 15.8944 11.4824 15.8062C12.2067 15.7154 12.7987 15.5248 13.2935 15.0988C13.7887 14.6724 14.0631 14.1164 14.2565 13.4159C14.4441 12.7363 14.5697 11.8635 14.728 10.7636L14.9229 9.409C15.0459 8.55419 15.144 7.87244 15.1631 7.31166C15.1829 6.7323 15.1213 6.23589 14.8939 5.76158C14.6666 5.2875 14.3178 4.92751 13.8532 4.57792C13.403 4.23928 12.8085 3.88514 12.0624 3.44072L11.092 2.86265C10.4148 2.4592 9.87438 2.13728 9.40707 1.91916C8.92432 1.69384 8.48329 1.5611 7.99992 1.5611ZM5.39697 3.73524C6.10198 3.31527 6.59941 3.01964 7.01573 2.82532C7.42179 2.63578 7.71375 2.5611 7.99992 2.5611C8.28609 2.5611 8.57805 2.63578 8.98412 2.82532C9.40043 3.01964 9.89786 3.31527 10.6029 3.73524L11.5261 4.2852C12.3023 4.74758 12.85 5.07466 13.252 5.37703C13.6443 5.67217 13.8591 5.91639 13.9921 6.19388C14.1251 6.47113 14.1803 6.79001 14.1637 7.27756C14.1467 7.77745 14.057 8.4053 13.929 9.29513L13.7431 10.5867C13.5788 11.7288 13.4613 12.5386 13.2926 13.1497C13.1277 13.747 12.9292 14.0929 12.641 14.341C12.3524 14.5895 11.9783 14.7362 11.3579 14.814C10.7239 14.8935 9.89909 14.8944 8.7373 14.8944H7.26254C6.10075 14.8944 5.27595 14.8935 4.64192 14.814C4.02156 14.7362 3.64744 14.5895 3.35886 14.341C3.07068 14.0929 2.87217 13.747 2.70726 13.1497C2.53852 12.5386 2.42105 11.7288 2.25672 10.5867L2.07087 9.29513C1.94283 8.4053 1.85319 7.77745 1.83613 7.27756C1.8195 6.79001 1.87478 6.47113 2.0077 6.19388C2.14073 5.91639 2.35557 5.67217 2.74788 5.37703C3.1498 5.07466 3.69754 4.74758 4.47375 4.2852L5.39697 3.73524Z" fill="#C2C2C2"/>
+                            </svg>                            
+                        <span class="links_name">Beranda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" data-content="content2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33331 5.15041C1.33331 3.44416 2.7165 2.06097 4.42274 2.06097C6.12899 2.06097 7.51218 3.44416 7.51218 5.15041C7.51218 6.85665 6.12899 8.23984 4.42274 8.23984C2.7165 8.23984 1.33331 6.85665 1.33331 5.15041Z" fill="#C2C2C2"/>
+                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M8.48798 12.3049C8.48798 10.5986 9.87116 9.21545 11.5774 9.21545C13.2837 9.21545 14.6668 10.5986 14.6668 12.3049C14.6668 14.0111 13.2837 15.3943 11.5774 15.3943C9.87116 15.3943 8.48798 14.0111 8.48798 12.3049Z" fill="#C2C2C2"/>
+                            <path d="M1.33331 12.3943C1.33331 10.9801 1.33331 10.273 1.77265 9.83363C2.21199 9.39429 2.9191 9.39429 4.33331 9.39429C5.74753 9.39429 6.45463 9.39429 6.89397 9.83363C7.33331 10.273 7.33331 10.9801 7.33331 12.3943C7.33331 13.8085 7.33331 14.5156 6.89397 14.9549C6.45463 15.3943 5.74753 15.3943 4.33331 15.3943C2.9191 15.3943 2.21199 15.3943 1.77265 14.9549C1.33331 14.5156 1.33331 13.8085 1.33331 12.3943Z" fill="#C2C2C2"/>
+                            <path opacity="0.5" d="M8.66669 5.06097C8.66669 3.64676 8.66669 2.93965 9.10603 2.50031C9.54537 2.06097 10.2525 2.06097 11.6667 2.06097C13.0809 2.06097 13.788 2.06097 14.2273 2.50031C14.6667 2.93965 14.6667 3.64676 14.6667 5.06097C14.6667 6.47519 14.6667 7.18229 14.2273 7.62163C13.788 8.06097 13.0809 8.06097 11.6667 8.06097C10.2525 8.06097 9.54537 8.06097 9.10603 7.62163C8.66669 7.18229 8.66669 6.47519 8.66669 5.06097Z" fill="#C2C2C2"/>
+                            </svg>                             
+                        <span class="links_name">Event</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" data-content="content3">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66669 3.85719V13.1905C2.66669 14.2951 3.56212 15.1905 4.66669 15.1905H11.3334C12.4379 15.1905 13.3334 14.2951 13.3334 13.1905V6.52386C13.3334 5.41929 12.4379 4.52386 11.3334 4.52386H3.33335C2.96516 4.52386 2.66669 4.22538 2.66669 3.85719ZM4.83335 8.52386C4.83335 8.24772 5.05721 8.02386 5.33335 8.02386H10.6667C10.9428 8.02386 11.1667 8.24772 11.1667 8.52386C11.1667 8.8 10.9428 9.02386 10.6667 9.02386H5.33335C5.05721 9.02386 4.83335 8.8 4.83335 8.52386ZM4.83335 10.8572C4.83335 10.5811 5.05721 10.3572 5.33335 10.3572H9.00002C9.27616 10.3572 9.50002 10.5811 9.50002 10.8572C9.50002 11.1333 9.27616 11.3572 9.00002 11.3572H5.33335C5.05721 11.3572 4.83335 11.1333 4.83335 10.8572Z" fill="#C2C2C2"/>
+                            <path opacity="0.5" d="M12 3.39454V4.63765C11.7915 4.56395 11.5671 4.52385 11.3334 4.52385H3.33335C2.96516 4.52385 2.66669 4.22537 2.66669 3.85718V3.80982C2.66669 3.45447 2.92798 3.1532 3.27975 3.10295L10.4781 2.07461C11.2814 1.95986 12 2.58314 12 3.39454Z" fill="#C2C2C2"/>
+                            </svg>                           
+                        <span class="links_name">Laporan</span>
+                    </a>
+                </li>
             </ul>
-            <hr>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://github.com/mdo.png" width="40" height="40" class="rounded-circle border border-4 border-success-subtle me-2">
-                    <div class="d-inline">
+                    <div class="d-inline" id="Profile">
                         <div class="col">
                             <strong>Muhammad Zamroni</strong>
                         </div>
@@ -82,31 +83,29 @@
                         </div>
                     </div>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-light text-small shadow">
+                <ul class="dropdown-menu dropdown-menu-light text-small shadow" style="z-index: 1;">
                     <li><a class="dropdown-item" href="#">New project...</a></li>
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
                     <li><a class="dropdown-item" href="#">Sign out</a></li>
                 </ul>
             </div>
+            </div>
         </div>
         <!-- Content -->
-        <section class="content" id="mainContent">
+        <div class="home_content">
             <div class="d-flex mt-4 ms-3">
                 <h4 class="mt-3 ms-3" id="welcomeMessage">Selamat Datang, <span style="color: #269544;">Muhammad Zamroni</span></h4>
             </div>
-            <div class="container mt-4 ms-4 me-2" id="content1" style="width: fit-content;">
-                <div class="row py-4 px-3 bg-light justify-content-center" style="width: 1128px;">
+            <div class="container mt-4 ms-4 pb-3 me-auto" id="content1">
+                <div class="row py-4 px-3 me-auto bg-light justify-content-center" >
                     <div class="row d-flex px-0 justify-content-between">
-                        <div class="col-lg-4 col-sm-5">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="d-flex px-3 py-1 my-2 align-items-center">
                                 <h5>Parkir - <span style="color: #269544;">Dengan Tiket</span></h5>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-5">
+                        <div class="col-lg-4 col-sm-6">
                             <div id="toggleContainer" class="d-flex rounded-pill px-2 py-2 ms-auto my-2" style="background-color: #EEF7F0; width: fit-content;">
                                 <a href="#" id="ticketToggle" class="px-3 py-1 text-decoration-none rounded-pill text-white" style="background-color: #269544;">Tiket</a>
                                 <a href="#" id="noTicketToggle" class="px-2 py-1 text-decoration-none rounded-pill text-dark">Tanpa Tiket</a>
@@ -115,7 +114,7 @@
                     </div>
                     
                     <div class="row">
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-3 col-k col-md-8 mb-3">
                             <div class="d-flex flex-column" style="width: fit-content;">
                                 <div class="col-12 mb-3">
                                     <p class="fw-bold me-1">November 2023 <span class="badge bg-success-subtle text-success fw-bold"><i class="bi bi-chevron-double-up"></i>2.53%</span></p>
@@ -133,7 +132,7 @@
                             </div>
                         </div>
                         
-                        <div class="col-9 justify-content-between">
+                        <div class="col-xl-9 col-lg-10 col-md-12 justify-content-between">
                             <div class="row">
                                 <div class="col-xl-3 col-md-6 mb-4">
                                     <div class="card bg-success-subtle h-100">
@@ -217,7 +216,7 @@
                         </div> 
                     </div>
                 </div>
-                <div class="row bg-light mt-4" style="width: 1128px;">
+                <div class="row bg-light mt-4 pb-4 me-auto">
                       <div class="card border-0 rounded">
                         <div class="card-header py-3 d-flex justify-content-between">
                             <h6 class="m-0 fw-bold">Grafik Penggunaan Tiket</h6>
@@ -239,13 +238,13 @@
                       </div>
                   </div>                  
             </div>
-            <div id="content2" style="display: none;">
-                <div class="container bg-light rounded mt-4 ms-4 p-3" style="width: 1128px; margin-top: 20px;">
+            <div id="content2" class="pe-5 pb-5" style="display: none;">
+                <div class="container bg-light rounded mt-4 ms-4 p-3">
                         <div class="row justify-content-between">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6">
                                 <h5>Daftar Event</h5>
                             </div>
-                            <div class="col-lg-4 text-end">
+                            <div class="col-lg-4 col-md-6 text-end">
                                 <button class="btn rounded bg-success text-white border-0 py-2 px-4"><i class="bi bi-plus-circle"></i><span class="ms-2">Tambah Data</span></button>
                             </div>
                             <div class="col-12 mt-3 input-group mb-3">
@@ -281,6 +280,9 @@
                                     </ul>
                                   </div>
                                 <p class="mb-0">Data</p>
+                            </div>
+                            <div class="Table_content">
+
                             </div>
                             <table class="table">
                                 <thead>
@@ -355,21 +357,27 @@
                                   </tr>
                                 </tbody>
                               </table>
-                              <div class="d-flex mt-5">
-                                <div class="col">
-                                    <p class="fw-normal ">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
+                              <div class="d-flex justify-content-between mt-5" id="pagi" style="overflow: auto;">
+                                <div class="col-md-5 col-12 align-items-center" id="informasiH">
+                                    <p class="fw-normal mb-0 py-2">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
                                 </div>
-                                    <p class="my-0 mx-2 py-2">Halaman</p>
+                                <div class="col-md-7 col-sm-12" id="pagination">
+                                    <div class="d-flex justify-content-end">
+                                       <p class="my-0 mx-2 py-2">Halaman</p>
                                     <button class="btn border border-1 border-secondary rounded-start"><i class="bi bi-chevron-left"></i></button>
                                     <p class="border border-1 rounded-end border-secondary py-2 px-3 m-0">1</p>
                                     <p class="my-0 mx-2 py-2">Dari <span class="fw-bold">6</span> Halaman</p>
-                                    <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button>
+                                    <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button> 
+                                    </div>
+                              </div>  
+                                
                               </div>
+                                    
                         </div>
                     </div>
             </div>
-            <div id="content3" style="display: none;">
-                <div class="container bg-light rounded mt-4 ms-4 p-3" style="width: 1128px; margin-top: 20px;">
+            <div id="content3" class="pe-5 pb-5" style="display: none;">
+                <div class="container bg-light rounded mt-4 ms-4 p-3">
                     <div class="row justify-content-between">
                         <div class="col-lg-4">
                             <h5>Laporan</h5>
@@ -481,21 +489,24 @@
                               </tr>
                             </tbody>
                           </table>
-                          <div class="d-flex mt-5">
-                            <div class="col">
-                                <p class="fw-normal ">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
+                          <div class="d-flex justify-content-between mt-5" id="pagi" style="overflow: auto;">
+                                <div class="col-md-5 col-12 align-items-center" id="informasiH">
+                                <p class="fw-normal mb-0 py-2">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
                             </div>
-                                <p class="my-0 mx-2 py-2">Halaman</p>
+                            <div class="col-md-7 col-sm-12" id="pagination">
+                                <div class="d-flex justify-content-end">
+                                   <p class="my-0 mx-2 py-2">Halaman</p>
                                 <button class="btn border border-1 border-secondary rounded-start"><i class="bi bi-chevron-left"></i></button>
                                 <p class="border border-1 rounded-end border-secondary py-2 px-3 m-0">1</p>
                                 <p class="my-0 mx-2 py-2">Dari <span class="fw-bold">6</span> Halaman</p>
-                                <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button>
+                                <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button> 
+                                </div>
+                          </div>                             
                           </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
