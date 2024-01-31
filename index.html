@@ -252,7 +252,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="col-xl-3 col-md-6 mb-4">
                   <div class="card bg-success text-white h-100">
                     <div class="card-body">
@@ -286,12 +285,170 @@
                         <div class="col-12">
                           <p class="mt-auto mb-0">Tiket digunakan</p>
                           <h4>1.240.000</h4>
+                          
+                <div class="row bg-light mt-4 pb-4 me-auto">
+                      <div class="card border-0 rounded">
+                        <div class="card-header py-3 d-flex justify-content-between">
+                            <h6 class="m-0 fw-bold">Grafik Penggunaan Tiket</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle border border-secondary rounded border-1 px-2 py-0 mx-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    2023
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">2021</a></li>
+                                    <li><a class="dropdown-item" href="#">2022</a></li>
+                                </ul>
+                            </div>
+                        </div>                        
+                        <div class="card-body">
+                          <div class="chart-area">
+                            <canvas id="myLineChart" class="chartjs-render-monitor"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                  </div>                  
+            </div>
+
+            <div id="content2" class="pe-5 pb-5" style="display: none;">
+                <div class="container bg-light rounded mt-4 ms-4 p-3">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Daftar Event</h5>
+                            </div>
+                            <div class="col-lg-4 col-md-6 text-end">
+                                <button id="btnTambahData" class="btn rounded bg-success text-white border-0 py-2 px-4">
+                                    <i class="bi bi-plus-circle"></i><span class="ms-2">Tambah Data</span></button>
+                            </div>
+                            <div class="col-12 mt-3 input-group mb-3">
+                                <div class="input-group-append px-2 pt-1">
+                                    <a>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1040_77)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66668 1.83337C4.44502 1.83337 1.83334 4.44505 1.83334 7.66671C1.83334 10.8884 4.44502 13.5 7.66668 13.5C10.8883 13.5 13.5 10.8884 13.5 7.66671C13.5 4.44505 10.8883 1.83337 7.66668 1.83337ZM0.833344 7.66671C0.833344 3.89276 3.89273 0.833374 7.66668 0.833374C11.4406 0.833374 14.5 3.89276 14.5 7.66671C14.5 9.37372 13.8741 10.9345 12.8393 12.1322L15.0202 14.3132C15.2155 14.5084 15.2155 14.825 15.0202 15.0203C14.825 15.2155 14.5084 15.2155 14.3131 15.0203L12.1321 12.8393C10.9345 13.8741 9.37369 14.5 7.66668 14.5C3.89273 14.5 0.833344 11.4407 0.833344 7.66671Z" fill="#606060"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1040_77">
+                                            <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                    </a>              
+                                </div>
+                                <input type="text" class="form-control" placeholder="Cari Event" aria-label="Cari Event"
+                                    aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-center my-2">
+                                <p class="mb-0">Menampilkan</p>
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle border border-secondary rounded border-1 px-2 py-0 mx-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      10
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">15</a></li>
+                                      <li><a class="dropdown-item" href="#">20</a></li>
+                                      <li><a class="dropdown-item" href="#">30</a></li>
+                                    </ul>
+                                  </div>
+                                <p class="mb-0">Data</p>
+                            </div>
+                            <div class="Table_content">
+
+                            </div>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col-2">No</th>
+                                    <th scope="col">Nama Event</th>
+                                    <th scope="col">Tanggal Event</th>
+                                    <th scope="col">Waktu Pelaksanaan</th>
+                                    <th scope="col">Aksi</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Event 1</td>
+                                    <td>24 Mei 2023</td>
+                                    <td>06:33 WIB</td>
+                                    <td><button class="btn btn-light btn-view rounded pt-0 pb-1 px-2 " style="border: solid 1px #269544;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                      </svg>
+                                    </button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Event 2</td>
+                                    <td>1 Februari 2023</td>
+                                    <td>01:05 WIB</td>
+                                    <td><button class="btn btn-light btn-view rounded pt-0 pb-1 px-2"  style="border: solid 1px #269544;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                      </svg>
+                                    </button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Event 3</td>
+                                    <td>22 Oktober 2023</td>
+                                    <td>10:30 WIB</td>
+                                    <td><button class="btn btn-light btn-view rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                      </svg>
+                                    </button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Event 4</td>
+                                    <td>8 September 2023</td>
+                                    <td>07:18 WIB</td>
+                                    <td><button class="btn btn-light btn-view rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                      </svg>
+                                    </button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td>Event 5</td>
+                                    <td>21 September 2023</td>
+                                    <td>17:28 WIB</td>
+                                    <td><button class="btn btn-light btn-view rounded pt-0 pb-1 px-2"  style="border: solid 1px #269544;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                      </svg>
+                                    </button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="d-flex justify-content-between mt-5" id="pagi" style="overflow: auto;">
+                                <div class="col-md-5 col-12 align-items-center" id="informasiH">
+                                    <p class="fw-normal mb-0 py-2">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
+                                </div>
+                                <div class="col-md-7 col-sm-12" id="pagination">
+                                    <div class="d-flex justify-content-end">
+                                       <p class="my-0 mx-2 py-2">Halaman</p>
+                                    <button class="btn border border-1 border-secondary rounded-start"><i class="bi bi-chevron-left"></i></button>
+                                    <p class="border border-1 rounded-end border-secondary py-2 px-3 m-0">1</p>
+                                    <p class="my-0 mx-2 py-2">Dari <span class="fw-bold">6</span> Halaman</p>
+                                    <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button> 
+                                    </div>
+                              </div>
+                              </div
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-
+                        </div>
                 <div class="col-xl-3 col-md-6 mb-4">
                   <div class="card text-white h-100" style="background-color: #0f3958">
                     <div class="card-body">
@@ -305,6 +462,13 @@
                               fill="white"
                             />
                           </svg>
+            </div>
+
+            <div id="content3" class="pe-5 pb-5" style="display: none;">
+                <div class="container bg-light rounded mt-4 ms-4 p-3">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4">
+                            <h5>Laporan</h5>
                         </div>
                         <div class="col-12">
                           <p class="mt-auto mb-0">Tiket diambil</p>
@@ -334,6 +498,93 @@
                           <h4>240.000</h4>
                         </div>
                       </div>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col-2">No</th>
+                                <th scope="col">Nama Event</th>
+                                <th scope="col">Tanggal Event</th>
+                                <th scope="col">Waktu Pelaksanaan</th>
+                                <th scope="col">Aksi</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Event 1</td>
+                                <td>24 Mei 2023</td>
+                                <td>06:33 WIB</td>
+                                <td><button class="btn btn-light rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                  </svg>
+                                </button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Event 2</td>
+                                <td>1 Februari 2023</td>
+                                <td>01:05 WIB</td>
+                                <td><button class="btn btn-light rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                  </svg>
+                                </button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Event 3</td>
+                                <td>22 Oktober 2023</td>
+                                <td>10:30 WIB</td>
+                                <td><button class="btn btn-light rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                  </svg>
+                                </button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Event 4</td>
+                                <td>8 September 2023</td>
+                                <td>07:18 WIB</td>
+                                <td><button class="btn btn-light rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                  </svg>
+                                </button></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Event 5</td>
+                                <td>21 September 2023</td>
+                                <td>17:28 WIB</td>
+                                <td><button class="btn btn-light rounded pt-0 pb-1 px-2" style="border: solid 1px #269544;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#269544" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                  </svg>
+                                </button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="d-flex justify-content-between mt-5" id="pagi" style="overflow: auto;">
+                                <div class="col-md-5 col-12 align-items-center" id="informasiH">
+                                <p class="fw-normal mb-0 py-2">Menampilkan <span class="fw-semibold">10</span> data dari <span class="fw-semibold">59</span> data</p>
+                            </div>
+                            <div class="col-md-7 col-sm-12" id="pagination">
+                                <div class="d-flex justify-content-end">
+                                   <p class="my-0 mx-2 py-2">Halaman</p>
+                                <button class="btn border border-1 border-secondary rounded-start"><i class="bi bi-chevron-left"></i></button>
+                                <p class="border border-1 rounded-end border-secondary py-2 px-3 m-0">1</p>
+                                <p class="my-0 mx-2 py-2">Dari <span class="fw-bold">6</span> Halaman</p>
+                                <button class="btn border border-1 border-secondary rounded-end"><i class="bi bi-chevron-right"></i></button> 
+                                </div>
+                          </div>                             
+                          </div>
                     </div>
                   </div>
                 </div>
@@ -515,6 +766,215 @@
               </div>
             </div>
           </div>
+            <div id="tmbhdata" class="pe-5 pb-5" style="display: none;">
+               <div class="container bg-light rounded mt-4 ms-4 p-3">
+                <div class="row">
+                    <a class="my-2 text-decoration-none text-secondary"><i class="bi bi-chevron-left"></i>Kembali</a>
+                    <h5 class="my-2 fw-bold">Tambahkan Data Event</h5>
+                    <div class="input-group row gap-2 mb-3">
+                        <div class="my-2">
+                            <input type="text" class="form-control mb-1 py-3" placeholder="Nama Event" aria-label="Nama Event" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="row" style="column-gap: 20px;">
+                            <div class="col bg-light d-flex border rounded px-0">
+                                <input type="text" class="form-control py-3 border-0" placeholder="Tanggal Pelaksanaan" aria-label="Tanggal Pelaksanaan">
+                                <button class="btn" type="button" id="datepicker">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.62677 1.33337C4.90401 1.33337 5.12876 1.54951 5.12876 1.81613V2.78995C5.57403 2.78165 6.07314 2.78165 6.63472 2.78165H9.31197C9.87355 2.78165 10.3727 2.78165 10.8179 2.78995V1.81613C10.8179 1.54951 11.0427 1.33337 11.3199 1.33337C11.5972 1.33337 11.8219 1.54951 11.8219 1.81613V2.83267C12.7853 2.90685 13.4177 3.08893 13.8823 3.53577C14.347 3.98261 14.5363 4.59082 14.6134 5.51728L14.6666 6.00004H1.94962H1.33325V5.51728C1.41039 4.59082 1.59972 3.98261 2.06435 3.53577C2.52899 3.08893 3.16142 2.90685 4.12479 2.83267V1.81613C4.12479 1.54951 4.34953 1.33337 4.62677 1.33337Z" fill="#269544"/>
+                            <path opacity="0.5" d="M14.6667 9.33339V8.00005C14.6667 7.4407 14.6645 6.44351 14.6559 6H1.33977C1.33117 6.44351 1.33334 7.4407 1.33334 8.00005V9.33339C1.33334 11.8475 1.33334 13.1046 2.11439 13.8857C2.89544 14.6667 4.15252 14.6667 6.66668 14.6667H9.33334C11.8475 14.6667 13.1046 14.6667 13.8856 13.8857C14.6667 13.1046 14.6667 11.8475 14.6667 9.33339Z" fill="#269544"/>
+                            <path d="M12.0001 11.3333C12.0001 11.7015 11.7016 12 11.3334 12C10.9652 12 10.6667 11.7015 10.6667 11.3333C10.6667 10.9651 10.9652 10.6667 11.3334 10.6667C11.7016 10.6667 12.0001 10.9651 12.0001 11.3333Z" fill="#269544"/>
+                            <path d="M12.0001 8.66667C12.0001 9.03486 11.7016 9.33333 11.3334 9.33333C10.9652 9.33333 10.6667 9.03486 10.6667 8.66667C10.6667 8.29848 10.9652 8 11.3334 8C11.7016 8 12.0001 8.29848 12.0001 8.66667Z" fill="#269544"/>
+                            <path d="M8.66659 11.3333C8.66659 11.7015 8.36811 12 7.99992 12C7.63173 12 7.33325 11.7015 7.33325 11.3333C7.33325 10.9651 7.63173 10.6667 7.99992 10.6667C8.36811 10.6667 8.66659 10.9651 8.66659 11.3333Z" fill="#269544"/>
+                            <path d="M8.66659 8.66667C8.66659 9.03486 8.36811 9.33333 7.99992 9.33333C7.63173 9.33333 7.33325 9.03486 7.33325 8.66667C7.33325 8.29848 7.63173 8 7.99992 8C8.36811 8 8.66659 8.29848 8.66659 8.66667Z" fill="#269544"/>
+                            <path d="M5.33333 11.3333C5.33333 11.7015 5.03486 12 4.66667 12C4.29848 12 4 11.7015 4 11.3333C4 10.9651 4.29848 10.6667 4.66667 10.6667C5.03486 10.6667 5.33333 10.9651 5.33333 11.3333Z" fill="#269544"/>
+                            <path d="M5.33333 8.66667C5.33333 9.03486 5.03486 9.33333 4.66667 9.33333C4.29848 9.33333 4 9.03486 4 8.66667C4 8.29848 4.29848 8 4.66667 8C5.03486 8 5.33333 8.29848 5.33333 8.66667Z" fill="#269544"/>
+                            </svg>
+                            </button>
+                        </div>
+                             <div class="col d-flex bg-light border rounded px-0">
+                            <input type="text" class="form-control py-3 border-0" placeholder="Waktu Pelaksanaan" aria-label="Waktu Pelaksanaan">
+                            <button class="btn" type="button" id="clockpicker">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5" d="M8 14.6666C11.3137 14.6666 14 11.9803 14 8.66663C14 5.35292 11.3137 2.66663 8 2.66663C4.68629 2.66663 2 5.35292 2 8.66663C2 11.9803 4.68629 14.6666 8 14.6666Z" fill="#269544"/>
+                                <path d="M8 6.16663C8.27614 6.16663 8.5 6.39048 8.5 6.66663V8.16664H10C10.2761 8.16664 10.5 8.3905 10.5 8.66664C10.5 8.94278 10.2761 9.16664 10 9.16664H8.5V10.6666C8.5 10.9428 8.27614 11.1666 8 11.1666C7.72386 11.1666 7.5 10.9428 7.5 10.6666V9.16664H6C5.72386 9.16664 5.5 8.94278 5.5 8.66664C5.5 8.3905 5.72386 8.16664 6 8.16664H7.5V6.66663C7.5 6.39048 7.72386 6.16663 8 6.16663Z" fill="#269544"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49366 1.55995C5.63606 1.78565 5.5668 2.08297 5.33896 2.22404L2.74438 3.83045C2.51654 3.97152 2.21641 3.9029 2.07401 3.6772C1.93161 3.4515 2.00088 3.15417 2.22871 3.01311L4.82329 1.40669C5.05113 1.26563 5.35127 1.33424 5.49366 1.55995Z" fill="#269544"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5064 1.55994C10.6488 1.33424 10.9489 1.26563 11.1767 1.40669L13.7713 3.01311C13.9991 3.15417 14.0684 3.4515 13.926 3.6772C13.7836 3.9029 13.4835 3.97152 13.2556 3.83045L10.6611 2.22404C10.4332 2.08297 10.364 1.78565 10.5064 1.55994Z" fill="#269544"/>
+                                </svg>                                
+                        </button>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <button class="border rounded-pill py-2 text-white mt-4" style="background-color: #269544;">Tambah Data</button>
+                        </div>                      
+                    </div>
+                </div>
+               </div>
+            </div> 
+            
+            <div id="dtlevent" class="pe-5 pb-5" style="display: none;">
+                <div class="container bg-light rounded mt-4 ms-4 p-3">
+                 <div class="row">
+                    <a class="my-2 text-decoration-none text-secondary"><i class="bi bi-chevron-left"></i>Kembali</a>
+                    <h5 class="mt-2 fw-bold">Detail Event</h5>
+                    <div class="col-md-4 col-12">
+                        <div class="input-wrapper">
+                            <label>Nama Event</label>
+                            <input type="text" class="form-control py-3" placeholder="Gathering" disabled>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <label>Tanggal Diselenggarakan</label>
+                        <span class="form-group has-float-label d-flex align-items-center border rounded pe-3" style="background: #e9ecef;">
+                            <input type="text" class="form-control border-0 py-3" placeholder="01-01-2024" disabled>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.62677 1.33337C4.90401 1.33337 5.12876 1.54951 5.12876 1.81613V2.78995C5.57403 2.78165 6.07314 2.78165 6.63472 2.78165H9.31197C9.87355 2.78165 10.3727 2.78165 10.8179 2.78995V1.81613C10.8179 1.54951 11.0427 1.33337 11.3199 1.33337C11.5972 1.33337 11.8219 1.54951 11.8219 1.81613V2.83267C12.7853 2.90685 13.4177 3.08893 13.8823 3.53577C14.347 3.98261 14.5363 4.59082 14.6134 5.51728L14.6666 6.00004H1.94962H1.33325V5.51728C1.41039 4.59082 1.59972 3.98261 2.06435 3.53577C2.52899 3.08893 3.16142 2.90685 4.12479 2.83267V1.81613C4.12479 1.54951 4.34953 1.33337 4.62677 1.33337Z" fill="#878787"/>
+                                <path opacity="0.5" d="M14.6667 9.33339V8.00005C14.6667 7.4407 14.6645 6.44351 14.6559 6H1.33977C1.33117 6.44351 1.33334 7.4407 1.33334 8.00005V9.33339C1.33334 11.8475 1.33334 13.1046 2.11439 13.8857C2.89544 14.6667 4.15252 14.6667 6.66668 14.6667H9.33334C11.8475 14.6667 13.1046 14.6667 13.8856 13.8857C14.6667 13.1046 14.6667 11.8475 14.6667 9.33339Z" fill="#878787"/>
+                                <path d="M12.0001 11.3333C12.0001 11.7015 11.7016 12 11.3334 12C10.9652 12 10.6667 11.7015 10.6667 11.3333C10.6667 10.9651 10.9652 10.6667 11.3334 10.6667C11.7016 10.6667 12.0001 10.9651 12.0001 11.3333Z" fill="#878787"/>
+                                <path d="M12.0001 8.66667C12.0001 9.03486 11.7016 9.33333 11.3334 9.33333C10.9652 9.33333 10.6667 9.03486 10.6667 8.66667C10.6667 8.29848 10.9652 8 11.3334 8C11.7016 8 12.0001 8.29848 12.0001 8.66667Z" fill="#878787"/>
+                                <path d="M8.66659 11.3333C8.66659 11.7015 8.36811 12 7.99992 12C7.63173 12 7.33325 11.7015 7.33325 11.3333C7.33325 10.9651 7.63173 10.6667 7.99992 10.6667C8.36811 10.6667 8.66659 10.9651 8.66659 11.3333Z" fill="#878787"/>
+                                <path d="M8.66659 8.66667C8.66659 9.03486 8.36811 9.33333 7.99992 9.33333C7.63173 9.33333 7.33325 9.03486 7.33325 8.66667C7.33325 8.29848 7.63173 8 7.99992 8C8.36811 8 8.66659 8.29848 8.66659 8.66667Z" fill="#878787"/>
+                                <path d="M5.33333 11.3333C5.33333 11.7015 5.03486 12 4.66667 12C4.29848 12 4 11.7015 4 11.3333C4 10.9651 4.29848 10.6667 4.66667 10.6667C5.03486 10.6667 5.33333 10.9651 5.33333 11.3333Z" fill="#878787"/>
+                                <path d="M5.33333 8.66667C5.33333 9.03486 5.03486 9.33333 4.66667 9.33333C4.29848 9.33333 4 9.03486 4 8.66667C4 8.29848 4.29848 8 4.66667 8C5.03486 8 5.33333 8.29848 5.33333 8.66667Z" fill="#878787"/>
+                                </svg>                                
+                            </span>
+                    </div>
+                    <div class="col-md-4 col-12">   
+                         <label>Waktu Pelaksanaan</label>
+                         <span class="form-group has-float-label  d-flex align-items-center border rounded pe-3" style="background: #e9ecef;">   
+                            <input type="text" class="form-control border-0 py-3"  placeholder="20.00 WIB" disabled>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5" d="M8 14.6666C11.3137 14.6666 14 11.9803 14 8.66663C14 5.35292 11.3137 2.66663 8 2.66663C4.68629 2.66663 2 5.35292 2 8.66663C2 11.9803 4.68629 14.6666 8 14.6666Z" fill="#878787"/>
+                                <path d="M8 6.16663C8.27614 6.16663 8.5 6.39048 8.5 6.66663V8.16664H10C10.2761 8.16664 10.5 8.3905 10.5 8.66664C10.5 8.94278 10.2761 9.16664 10 9.16664H8.5V10.6666C8.5 10.9428 8.27614 11.1666 8 11.1666C7.72386 11.1666 7.5 10.9428 7.5 10.6666V9.16664H6C5.72386 9.16664 5.5 8.94278 5.5 8.66664C5.5 8.3905 5.72386 8.16664 6 8.16664H7.5V6.66663C7.5 6.39048 7.72386 6.16663 8 6.16663Z" fill="#878787"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49366 1.55995C5.63606 1.78565 5.5668 2.08297 5.33896 2.22404L2.74438 3.83045C2.51654 3.97152 2.21641 3.9029 2.07401 3.6772C1.93161 3.4515 2.00088 3.15417 2.22871 3.01311L4.82329 1.40669C5.05113 1.26563 5.35127 1.33424 5.49366 1.55995Z" fill="#878787"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5064 1.55994C10.6488 1.33424 10.9489 1.26563 11.1767 1.40669L13.7713 3.01311C13.9991 3.15417 14.0684 3.4515 13.926 3.6772C13.7836 3.9029 13.4835 3.97152 13.2556 3.83045L10.6611 2.22404C10.4332 2.08297 10.364 1.78565 10.5064 1.55994Z" fill="#878787"/>
+                                </svg>                                
+                        </span>
+                    </div>
+                 </div>
+                </div>
+                <div class="container  bg-light rounded mt-4 ms-4 p-3">
+                    <div class="row">
+                        <h6 class="my-2 fw-bold mb-3">Daftar Pengunjung</h6>
+                        <div class="row">
+                            <div class="col-1 w-auto d-flex align-items-center me-3">
+                                <h6 style="margin-top: 28px;">1.</h6>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control  py-3" placeholder="N 8918 ZIA" disabled>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <label>Nama Pemilik</label>
+                                <span class="form-group has-float-label d-flex align-items-center rounded" style="background: #F0F2F4;">
+                                    <input type="text" class="form-control  py-3" placeholder="Abdurrahman" disabled>
+                                </span>
+                            </div>
+                            <div class="col">   
+                                 <label>Jam Masuk</label>
+                                 <span class="form-group has-float-label  d-flex align-items-center rounded" style="background: #F0F2F4;">   
+                                    <input type="text" class="form-control  py-3"  placeholder="19.00 WIB" disabled>                              
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 w-auto d-flex align-items-center me-3">
+                                <h6 style="margin-top: 28px;">2.</h6>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control  py-3" placeholder="N 8918 ZIA" disabled>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <label>Nama Pemilik</label>
+                                <span class="form-group has-float-label d-flex align-items-center rounded" style="background: #F0F2F4;">
+                                    <input type="text" class="form-control  py-3" placeholder="Wilbert Conn" disabled>
+                                </span>
+                            </div>
+                            <div class="col">   
+                                 <label>Jam Masuk</label>
+                                 <span class="form-group has-float-label  d-flex align-items-center rounded" style="background: #F0F2F4;">   
+                                    <input type="text" class="form-control  py-3"  placeholder="19.01 WIB" disabled>                              
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 w-auto d-flex align-items-center me-3">
+                                <h6 style="margin-top: 28px;">3.</h6>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control  py-3" placeholder="N 8918 ZIA" disabled>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <label>Nama Pemilik</label>
+                                <span class="form-group has-float-label d-flex align-items-center rounded" style="background: #F0F2F4;">
+                                    <input type="text" class="form-control  py-3" placeholder="Owen Pfannerstill" disabled>
+                                </span>
+                            </div>
+                            <div class="col">   
+                                 <label>Jam Masuk</label>
+                                 <span class="form-group has-float-label  d-flex align-items-center rounded" style="background: #F0F2F4;">   
+                                    <input type="text" class="form-control  py-3"  placeholder="19.01 WIB" disabled>                              
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 w-auto d-flex align-items-center me-3">
+                                <h6 style="margin-top: 28px;">4.</h6>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control  py-3" placeholder="N 8918 ZIA" disabled>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <label>Nama Pemilik</label>
+                                <span class="form-group has-float-label d-flex align-items-center rounded" style="background: #F0F2F4;">
+                                    <input type="text" class="form-control  py-3" placeholder="Albert Greenfelder" disabled>
+                                </span>
+                            </div>
+                            <div class="col">   
+                                 <label>Jam Masuk</label>
+                                 <span class="form-group has-float-label  d-flex align-items-center rounded" style="background: #F0F2F4;">   
+                                    <input type="text" class="form-control  py-3"  placeholder="19.05 WIB" disabled>                              
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 w-auto d-flex align-items-center me-3">
+                                <h6 style="margin-top: 28px;">5.</h6>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control  py-3" placeholder="N 8918 ZIA" disabled>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <label>Nama Pemilik</label>
+                                <span class="form-group has-float-label d-flex align-items-center rounded" style="background: #F0F2F4;">
+                                    <input type="text" class="form-control  py-3" placeholder="Lee Lang" disabled>
+                                </span>
+                            </div>
+                            <div class="col">   
+                                 <label>Jam Masuk</label>
+                                 <span class="form-group has-float-label  d-flex align-items-center rounded" style="background: #F0F2F4;">   
+                                    <input type="text" class="form-control  py-3"  placeholder="19.10 WIB" disabled>                              
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row px-4">
+                            <button class="border rounded-pill py-2 text-white mt-4" style="background-color: #269544;">Cetak Laporan</button>
+                        </div>
+                </div>
+            </div>
         </div>
       </div>
       <div id="content3" class="pe-5 pb-5" style="display: none">

@@ -5,7 +5,7 @@ body {
     background-color: #F0F2F5!important;
     min-height: 100vh;
     width: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -234,4 +234,12 @@ body {
     padding: 20px 0 ;
     font-size: 14px;
     font-weight: 500;
+}
+
+#dtlevent {
+    label{
+        margin-left: 10px;
+        transform: translateY(10px);
+        color: #55595C; 
+    }
 }
