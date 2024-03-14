@@ -84,4 +84,3 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
-console.log(chartLabels);
