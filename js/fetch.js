@@ -1,5 +1,5 @@
 // Base URL for API endpoints
-const baseURL = "http://localhost:8000";
+const baseURL = "https://qr-scanner-api-3fffd3970239.herokuapp.com";
 
 // Function to retrieve all events
 function getAllEvents(page, limit, search) {
