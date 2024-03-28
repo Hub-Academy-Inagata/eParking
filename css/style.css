@@ -183,6 +183,14 @@ body {
     width: auto;
   }
 
+  .visitors {
+    overflow-x: auto !important;
+    display: block;
+    /* width: max-content; */
+}
+
+
+
   @media (max-width: 768px) {
     .home_content {
         width: 90%;
@@ -240,6 +248,32 @@ body {
     label{
         margin-left: 10px;
         transform: translateY(10px);
+        font-size: 10px;
+        font-weight: 700;
         color: #55595C; 
+    }
+}
+
+#dtltiket {
+    label{
+        margin-left: 10px;
+        transform: translateY(10px);
+        font-size: 10px;
+        font-weight: 700;
+        color: #55595C; 
+    }
+    .col-left {
+        padding-right: 7rem;
+    }
+    .line {
+        border-right: 2px solid #E6E6E6 ;
+        margin: 0 32px 0 32px !important;
+    }
+    h6 {
+        font-size: 12px;
+        color: #55595C;
+    }
+    input {
+        color: #55595C;
     }
 }
