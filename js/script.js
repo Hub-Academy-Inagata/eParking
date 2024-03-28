@@ -2,12 +2,26 @@ let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
 let btnTambahData = document.querySelector("#btnTambahData");
 let tmbhdata = document.querySelector("#tmbhdata");
+let btnadddata = document.querySelector("#btnadddata")
 let btnview = document.querySelectorAll(".btn-view");
 let dtlevent = document.querySelector("#dtlevent");
+let btnDetailTiket = document.querySelector("#btnDetailTiket");
+let dtltiket = document.querySelector("#dtltiket");
 
 btnTambahData.onclick = function () {
   document.getElementById("content2").style.display = "none";
   tmbhdata.style.display = "block";
+};
+
+btnadddata.onclick = function () {
+  document.getElementById("content2").style.display = "none";
+  document.getElementById("tmbhdata").style.display = "none";
+  dtlevent.style.display = "block";
+};
+
+btnDetailTiket.onclick = function () {
+  document.getElementById("content3").style.display = "none";
+  dtltiket.style.display = "block";
 };
 
 document.querySelector("#tmbhdata a").onclick = function (event) {
@@ -23,8 +37,18 @@ document.querySelector("#dtlevent a").onclick = function (event) {
 
   document.getElementById("content2").style.display = "block";
   dtlevent.style.display = "none";
-  resetNavLinkStyles();
+  // resetNavLinkStyles();
 };
+
+document.querySelector("#dtltiket a").onclick = function (event) {
+  event.preventDefault();
+
+  document.getElementById("content3").style.display = "block";
+  dtltiket.style.display = "none";
+  // resetNavLinkStyles();
+};
+
+
 
 $("#datepicker").datepicker();
 
